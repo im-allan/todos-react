@@ -1,0 +1,110 @@
+ul,
+li,
+span {
+  text-overflow: ellipsis;
+}
+
+:root {
+  --dark: #292929;
+  --white: #ffffff;
+}
+
+body.light {
+  transition: all 1.5s;
+  --soft: #fafbfd;
+  --textcolor: #000000;
+  --image: url("../sun.svg");
+}
+
+body.dark {
+  background-color: var(--dark);
+  color: var(--white);
+  transition: all 1.5s;
+  --soft: #323232;
+  --textcolor: #ffffff;
+  --inputcolor: #323232;
+  --image: url("../moon.svg");
+}
+
+.image {
+  margin-top: -9px;
+  width: 35px;
+  height: 35px;
+  background: var(--image);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  transition: background 0.7s ease-in-out;
+}
+
+.input {
+  background-color: var(--inputcolor);
+  color: var(--textcolor);
+}
+.input:focus {
+  background-color: var(--inputcolor);
+  color: var(--textcolor);
+}
+
+.input::placeholder {
+  color: var(--textcolor);
+}
+
+.module {
+  background-color: var(--soft);
+  color: var(--textcolor);
+}
+
+/* .darkmode {
+  background-color: #292929;
+  color: white;
+}
+
+.darkmode .module{
+  background-color: #3d3d3d;
+} */
+
+body {
+  background-color: #f8f9fb;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+span {
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.todos__count {
+  height: 100px;
+  margin-top: 150px;
+  margin-right: 20px;
+}
+
+.toggle {
+  margin-left: 120px;
+}
+
+h1 {
+  margin-bottom: 120px;
+}
+
+@media (max-width: 575.98px) {
+  .todos__count {
+    width: 140px;
+  }
+  .toggle {
+    width: 20px;
+    margin-left: 20px;
+    margin-right: 200px;
+    padding-top: 10px;
+    margin-top: -10px;
+  }
+  .toggle label {
+    font-size: 15px;
+  }
+}
